@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+<div class="container">
+    {{ block.super }}
+    <br>
+    {% if messo %}
+       
+    {% for messo in messo %}
+    <p style="color: red;">
+    {{messo}}
+    </p>
+        
+    {% endfor %}  
+    {% endif %}
+    <!--  -->
+{% if articles %}
+{% for art in articles %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>{{art.title}}</h2><br>
+            <div class="">
+                <img src=" {{art.image.url}} " alt="">
+            </div>
+            <br><br>
+            <h5>By Tr.{{art.posted_by.username}}</h5><br>
+            <br>
+
+        </div><br><br><br>
+        <div class="col-md-1">
+            .
+        </div>
+
+        <div class="col-md-7">
+            <h2>Context</h2>
+            <p>
+                {{art.content}}
+            </p>
+            <p>
+                More on <a href=" {{art.article_link}}"> <i> {{art.title}} </i></a>
+               
+            </p>
+            
+        </div>
+        <hr>
+
+    </div>
+    <hr>
+ 
+
+{% endfor %} 
+{% endif %}
+</div>
+{% endblock content %}
+    

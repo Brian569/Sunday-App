@@ -6,9 +6,10 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = TeacherProfile
         fields = ['name', 'my_picture', 'about', 'email', 'phone_number']
-        exclude = ['user']
+        exclude = ['user', 'my_posts']
 
 class ArticleForm(forms.ModelForm):
     class Meta:
-        fields = ['title', 'image', 'content']
+        model = Article
+        fields = ['title', 'image', 'content', 'article_link']
         exclude = ['posted_by']

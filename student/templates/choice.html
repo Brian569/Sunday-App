@@ -1,0 +1,37 @@
+{% extends 'my_base.html' %}
+
+
+{% block content %}
+<div class="container"> 
+    <div class="logo">
+        <img src="https://st2.depositphotos.com/1686208/5193/v/600/depositphotos_51930639-stock-illustration-knowledge.jpg" alt="">
+    </div>
+        <a href="{% url 'home' %}">Teacher</a> <br><hr>
+        <a href="{% url 'student_home' %}">Student</a>
+    
+</div>
+
+<style>
+    *{
+        text-align: center;
+        align-items: center;
+        top: 50%;
+    }
+    a{
+        line-height: 20vmin;
+        font-size: 2rem;
+        text-decoration: none;
+        color: teal;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    a:hover{
+        text-decoration: none;
+        color: orange;
+    }
+    .container{
+        margin-top: 5vmin;
+    }
+</style>
+{% endblock content %}
+    

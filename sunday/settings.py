@@ -41,9 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'school',
+    'student',
     'bootstrap4',
     'cloudinary',
     'django_registration',
+    
     
 ]
 
@@ -136,4 +138,4 @@ cloudinary.config(
   api_secret = os.environ.get('CLOUD_API_SECRET') 
 )
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/schools/'

@@ -1,0 +1,27 @@
+<nav>
+    <div class="logo">
+        <img src="https://st2.depositphotos.com/1686208/5193/v/600/depositphotos_51930639-stock-illustration-knowledge.jpg" alt="">
+    </div>
+    
+    <ul>
+        <li><a href="{% url 'student_home' %}">Home</a></li>
+        <li><a href="{% url 'new_posts' %}">Topics</a></li>
+        <li><a href="{% url 'choice' %}">Select</a></li>
+    </ul>
+    
+</nav>
+
+<style>
+a{
+    padding: 5vmin;
+    margin-top: 4vmin;
+    margin-bottom: 4vmin;
+    color: teal;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+ a:hover{
+    text-decoration: none;
+    color: orange;
+}
+</style>

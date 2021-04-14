@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+    
+ <div class="container">
+    {{ block.super }} 
+    <br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+            <form action="{% url 'add_article' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+        
+                <input type="submit" value="ADD">
+            </form>
+        </div>
+    </div>
+ </div>
+
+{% endblock content %}
+    

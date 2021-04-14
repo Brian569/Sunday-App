@@ -9,13 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <title>Sunday App</title>
+    <title>Student Side</title>
+    <link rel="stylesheet" href=" {% static 'styles.css' %} ">
     
     {% block styles %}
         {% bootstrap_css %}
+
     {% endblock styles %}
 
-    <link rel="stylesheet" href=" {% static 'styles.css' %} ">
+    
         
 </head>
 <body>
@@ -23,16 +25,12 @@
    <div class="container-fluid">
     <h6>.</h6>
     {% block content %}
-    {% include 'navbar.html' %}
-        <br><br>
+    {% include 'my_navbar.html' %}
     {% endblock content %}
- <footer style="height: 100vh;">
-     .
+ <footer>
+    .
  </footer>
     
    </div>
-
-
 </body>
-
 </html>

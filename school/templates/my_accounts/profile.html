@@ -6,6 +6,7 @@
     {{ block.super }}
     <div class="prof">
         <a href="{% url 'update_profile' %}">Update Profile</a>
+        <a href="{% url 'add_article' %}">Add a Teaching</a>
     </div>
     <br>
     
@@ -34,13 +35,23 @@
         
         <div class="col-md-6">
             <br>
-            <h3><b>MY TOPICS</b></h3>
-            <div class="prof">
-                <a href="">Add Topic</a>
-            </div>
+            <h3><b>MY TOPICS</b></h3>               
+            {% endfor %}  
+            {% endif %}
+
+            {% if article %}
+            
+            {% for art in article %}
+            <p> {{art.title}} </p>
+                
+            {% endfor %}
+                
+                
+            {% endif %}
+                
+
          </div>
-        {% endfor %}  
-        {% endif %}
+        
             
        
     </div>

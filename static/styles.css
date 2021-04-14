@@ -2,6 +2,7 @@
     background: url('https://i.pinimg.com/originals/49/c2/f8/49c2f88d8c761e1da8f5a4224a894078.jpg');
     background-size: cover;
     background-position: center;
+    
     background-color: orange;
 
 }
@@ -62,13 +63,28 @@ nav ul li{
 .body h2{
     text-align: center;
 }
+.body p{
+    font-size: 1.4rem;
+    margin-top: 4vmin;
+    padding: 3vmin;
+}
 .btn {
     border-color: orange;
 
 }
+.body img{
+    height: 400px;
+    width: 400px;
+    border-radius: 14px;
+    box-shadow: 5px 5px 5px rgba(255, 184, 4, 0.67);
+}
+
 .btn:hover{
 color: #fff;
 background-color: orange;
+}
+footer{
+    height: 100vh;
 }
 
 @media screen and (max-width: 653px) {
@@ -77,6 +93,11 @@ background-color: orange;
      height: 60vmin;
      margin-bottom: 3vmin;
     }
+    img{
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 3vmin;
+       }
     a{
         font-size: .8rem;
     }
@@ -88,6 +109,11 @@ background-color: orange;
      width: 40vmin;
      height: 40vmin;
     }
+    img{
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 3vmin;
+       }
     a{
         font-size: 1rem;
         padding: 0;
@@ -99,6 +125,11 @@ background-color: orange;
      width: 30vmin;
      height: 30vmin;
     }
+    img{
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 3vmin;
+       }
     a{
         font-size: 1rem;
         padding: 0;
@@ -110,6 +141,11 @@ background-color: orange;
      width: 40vmin;
      height: 40vmin;
     }
+    img{
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 3vmin;
+       }
     a{
         font-size: .8rem;
         padding: 0;
