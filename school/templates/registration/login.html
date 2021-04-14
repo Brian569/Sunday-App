@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+<div class="container">
+    {{ block.super }}
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <input type="submit" class="btn " value="login">
+                <input type="hidden" value="{{next}}">
+
+            </form>
+            <br><br>
+            <small>
+                Don't have an account? 
+                <a href="/accounts/register/">Register</a>
+            </small>
+        </div>        
+    </div>
+</div>    
+{% endblock content %}
+    

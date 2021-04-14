@@ -1,0 +1,23 @@
+<nav>
+    <div class="logo">
+        <img src="https://st2.depositphotos.com/1686208/5193/v/600/depositphotos_51930639-stock-illustration-knowledge.jpg" alt="">
+    </div>
+    
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="">Topics</a></li>
+
+        
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' user.id %}"> @ {{user.username}} </a></li>
+        
+        <li><a href="{% url 'logouts' %}">Logout</a></li>
+
+        {% else %}
+        <li><a href="/accounts/register/">Register</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+
+    </ul>
+    
+</nav>

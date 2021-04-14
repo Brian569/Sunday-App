@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="columns is-mobile">
+            <div class="column is-half is-offset-one-quarter ">
+    
+                <div class="col0md-5">
+                    <h2>
+                        You have successfully Registered your account!
+                    </h2>
+    
+                    <p>
+                        Procceed to 
+                       <a href="{% url 'login' %}">Login</a>
+                       
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+{% endblock content %}
+    
