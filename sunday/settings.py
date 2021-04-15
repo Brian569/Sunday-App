@@ -77,6 +77,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'sunday.wsgi.application'
 
 
