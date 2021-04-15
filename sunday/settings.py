@@ -59,7 +59,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
 ROOT_URLCONF = 'sunday.urls'
 
 TEMPLATES = [
@@ -87,14 +86,13 @@ WSGI_APPLICATION = 'sunday.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME', 'postgres'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'HOST': os.environ.get('DB_HOST', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'password'),
-        'PORT': os.environ.get('DB_PORT', '5432')
+        'NAME': os.environ.get('DB_NAME'),
+        'USER' : os.environ.get('DB_USER'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT' : os.environ.get('DB_PORT'),
+        'PASSWORD': os.environ.get('DB_PASSWORD')
     }
 }
-
 
 
 # Password validation
