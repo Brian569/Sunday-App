@@ -21,7 +21,7 @@ class TeacherProfile(models.Model):
     my_picture = CloudinaryField('image')
     about = models.TextField()
     phone_number = models.IntegerField()
-    email = models.EmailField(max_length=20)
+    email = models.EmailField(max_length=200)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     my_posts = models.ForeignKey(Article, on_delete=models.CASCADE, blank=True, null=True)
 
