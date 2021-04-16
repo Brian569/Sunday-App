@@ -80,7 +80,13 @@ def add_article(request):
 
 
 def logout_view(request):
-    
+
     logout(request)
 
     return redirect('login')
+
+def single_post(request, post_id):
+  
+    post = Article.objects.filter(pk=post_id)
+
+    return render(request, 'my_singlepost.html', {"post": post})

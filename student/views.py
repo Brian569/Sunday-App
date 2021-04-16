@@ -16,3 +16,9 @@ def my_posts(request):
     articles = Article.objects.all()
 
     return render(request, 'my_posts.html', {'articles' : articles})
+
+def single_post(request, post_id):
+  
+    post = Article.objects.filter(pk=post_id)
+
+    return render(request, 'my_singlepost.html', {"post": post})

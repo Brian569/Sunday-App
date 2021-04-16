@@ -21,12 +21,12 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>{{art.title}}</h2><br>
-            <div class="">
+            
+            <div class="boom">
                 <img src=" {{art.image.url}} " alt="">
             </div>
             <br><br>
-            <h5>By Tr.{{art.posted_by.username}}</h5><br>
+            <h4 style="color: teal;">By Tr.{{art.posted_by.username}}</h4><br>
             <br>
 
         </div><br><br><br>
@@ -35,15 +35,9 @@
         </div>
 
         <div class="col-md-7">
-            <h2>Context</h2>
-            <p>
-                {{art.content}}
-            </p>
-            <p>
-                More on <a href=" {{art.article_link}}"> <i> {{art.title}} </i></a>
-               
-            </p>
-            
+           <h2 style="color: orange;text-transform: uppercase; font-weight: 800;">{{art.title}}</h2><br>
+           
+            <p><a href="{% url 'single_post' art.id %}">Read now</a></p>
         </div>
         <hr>
 
@@ -54,5 +48,15 @@
 {% endfor %} 
 {% endif %}
 </div>
+<style>
+    h2 h4 {
+        font-size: 3rem;
+       
+        text-transform: uppercase;
+        
+    }
+</style>
 {% endblock content %}
-    
+<p>
+    {{art.content}}
+</p>

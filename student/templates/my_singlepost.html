@@ -1,0 +1,38 @@
+{% extends 'my_base.html' %}
+
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+
+<div class="container">
+    {{ block.super }}
+
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            
+            {% if post %}
+            
+            {% for post in post %}
+            <p> {{post.content}} </p>
+            <hr>
+            <p>
+                More on <a href=" {{post.article_link}}"> <i> {{post.title}} </i></a>
+               
+            </p>
+                
+            {% endfor %}
+                
+                
+            {% endif %}
+                
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+    
+{% endblock content %}
+    
