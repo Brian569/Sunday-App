@@ -17,7 +17,7 @@
             {% if post %}
             
             {% for post in post %}
-            <p> {{post.content|safe}} </p>
+            <p> {{post.new_content|safe}} </p>
             <hr>
             <p>
                 More on <a href=" {{post.article_link}}"> <i> {{post.title}} </i></a>

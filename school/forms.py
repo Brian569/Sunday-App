@@ -11,5 +11,4 @@ class ProfileForm(forms.ModelForm):
 class ArticleForm(forms.ModelForm):
     class Meta:
         model = Article
-        fields = ['title', 'image', 'content', 'article_link']
         exclude = ['posted_by']

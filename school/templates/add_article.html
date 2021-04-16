@@ -4,6 +4,8 @@
 {% block content %}
     
  <div class="container">
+    {{form.media}}
+
     {{ block.super }} 
     <br>
     <div class="row">
@@ -13,7 +15,7 @@
                 {% csrf_token %}
                 {% bootstrap_form form %}
         
-                <input type="submit" value="ADD">
+                <input class="a"  type="submit" value="ADD">
             </form>
         </div>
     </div>

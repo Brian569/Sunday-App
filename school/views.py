@@ -15,7 +15,7 @@ def home(request):
 @login_required
 def posts(request):
 
-    articles = Article.objects.all()
+    articles = Article.objects.all().order_by('-id')
 
     return render(request, 'post.html', {'articles' : articles})
 
