@@ -149,3 +149,8 @@ cloudinary.config(
 )
 
 LOGIN_REDIRECT_URL = '/schools/'
+
+import django_heroku
+django_heroku.settings(locals())
+
+TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'

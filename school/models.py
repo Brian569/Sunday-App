@@ -9,7 +9,7 @@ from django_quill.fields import QuillField
 class Article(models.Model):
     title = models.CharField(max_length=100)
     image = CloudinaryField('image')
-    new_content = QuillField()
+    new_content = HTMLField()
     article_link = models.CharField(max_length=100)
     posted_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
