@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('student.urls')),
+    path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
     path('schools/', include('school.urls')),
     path('accounts/', include('django_registration.backends.one_step.urls')),

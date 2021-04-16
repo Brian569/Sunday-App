@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'cloudinary',
     'django_registration',
+    'tinymce',
     
     
 ]
