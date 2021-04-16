@@ -17,7 +17,12 @@
             {% if post %}
             
             {% for post in post %}
+            
+            {% autoescape on %}
             <p> {{post.new_content|safe}} </p>
+            {% endautoescape %}
+            
+           
             <hr>
             <p>
                 More on <a href=" {{post.article_link}}"> <i> {{post.title}} </i></a>
