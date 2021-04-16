@@ -3,6 +3,7 @@
 
 {% block content %}
    <div class="container">
+      
     {{ block.super }}
     <div class="prof">
         <a href="{% url 'update_profile' %}">Update Profile</a>
@@ -25,7 +26,11 @@
                     <h4> {{profile.user.email}} </h4>
                     <p> {{profile.phone_number}} </p>
                     <p>
-                        {{profile.about}}
+                      
+                      {% autoescape on %}
+                      {{profile.about|safe}}
+                      {% endautoescape %}
+                      
                     </p>
                 </div>
                 

@@ -20,7 +20,7 @@ class TeacherProfile(models.Model):
 
     name = models.CharField(max_length=100)
     my_picture = CloudinaryField('image')
-    about = models.TextField()
+    about = HTMLField()
     phone_number = models.IntegerField()
     email = models.EmailField(max_length=200)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
