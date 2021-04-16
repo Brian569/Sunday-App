@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_registration',
     'tinymce',
+    'django_quill',
     
     
 ]
