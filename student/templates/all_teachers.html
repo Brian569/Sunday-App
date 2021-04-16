@@ -1,0 +1,48 @@
+{% extends 'my_base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+    <div class="container">
+        {{ block.super }}
+
+        
+        {% if teachers %}
+        
+        {% for teach in teachers %}
+        <div class="row">
+            <div class="col-md-6 body">
+                <img src="{{teach.my_picture.url}}" alt="">
+                <br><br><br>
+            </div>
+            
+            <hr>
+
+            <div class="best col-md-6">
+                <h2> {{teach.name}} </h2>
+                <p>
+                    <h3>Bio</h3>
+                    {{teach.about}}
+                </p>
+                <p>
+                    <h3> Contacts </h3>
+                    <p> {{teach.phone_number}} </p>
+                    <p> {{teach.email}} </p>
+                </p>
+                
+            
+            </div>
+            
+        </div>
+     
+        {% endfor %}
+            
+            
+        {% endif %}
+            
+    </div>
+
+    <style>
+    </style>
+{% endblock content %}
+    
