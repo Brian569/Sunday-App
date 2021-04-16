@@ -89,4 +89,4 @@ def single_post(request, post_id):
   
     post = Article.objects.filter(pk=post_id)
 
-    return render(request, 'my_singlepost.html', {"post": post})
+    return render(request, 'single_post.html', {"post": post})
