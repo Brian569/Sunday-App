@@ -12,5 +12,5 @@ urlpatterns = [
     path('logut/', logout_view, name = 'logouts'),
     path('posts/', posts, name ='posts'),
     path('add_article/', add_article, name = 'add_article'),
-    re_path(r'single_post/(\d+)', single_post, name = 'single_post')
+    re_path(r'single_post/(\d+)', single_post, name = 'single')
 ]
