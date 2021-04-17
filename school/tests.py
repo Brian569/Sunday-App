@@ -11,11 +11,10 @@ class testArticle(TestCase):
     def test_save(self):
         self.bmn.save_base()
         article = Article.objects.all()
-      
+        print(article)
 
         self.assertTrue(len(article) > 0)
 
 class Profile(TestCase):
     def setUp(self):
         self.sam = TeacherProfile(name='sam', phone_number='234467', email='fjg@fif.com', my_posts='test b')
-        
