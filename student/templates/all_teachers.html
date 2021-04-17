@@ -22,7 +22,12 @@
                 <h2> {{teach.name}} </h2>
                 <p>
                     <h3>Bio</h3>
-                    {{teach.about}}
+                    
+                    {% autoescape on %}
+                    {{teach.about|safe}}
+                    {% endautoescape %}
+                    
+                   
                 </p>
                 <p>
                     <h3> Contacts </h3>
