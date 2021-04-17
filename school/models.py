@@ -12,6 +12,7 @@ class Article(models.Model):
     new_content = HTMLField()
     article_link = models.CharField(max_length=100)
     posted_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+    
 
     def __str__(self):
         return self.title
