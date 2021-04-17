@@ -4,9 +4,9 @@
 
 {% block content %}
 <div class="container">
-    {{ block.super }}
+    {{ block.super }} <br>
     <div class="row">
-        <div class="col-md-4"></div>
+        <div class="col-md-4"> </div>
         <div class="col-md-8">
             <form action="{% url 'login' %}" method="post">
                 {% csrf_token %}

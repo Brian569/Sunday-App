@@ -37,9 +37,10 @@ def update_profile(request):
     if request.method  == 'POST':
         if TeacherProfile.objects.filter(user_id = current_user).exists():
             form = ProfileForm(request.POST, request.FILES, instance= TeacherProfile.objects.get(user_id = current_user))
-
+            prof = TeacherProfile.objects.filter(user_id = current_user)
         else:
             form = ProfileForm(request.POST, request.FILES)
+            prof = TeacherProfile.objects.filter(user_id = current_user)
         
         if form.is_valid():
             prof = form.save(commit=False)
@@ -53,10 +54,12 @@ def update_profile(request):
     else:
         if TeacherProfile.objects.filter(user_id = current_user).exists():
             form = ProfileForm(instance = TeacherProfile.objects.get(user_id = current_user))
+            prof = TeacherProfile.objects.filter(user_id = current_user)
         else:
             form = ProfileForm()
+            prof = TeacherProfile.objects.filter(user_id = current_user)
 
-    return render(request, 'my_accounts/update_profile.html', {'form': form})
+    return render(request, 'my_accounts/update_profile.html', {'form': form, 'prof': prof})
 
 
 @login_required
